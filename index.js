@@ -4,7 +4,7 @@ const session = require('express-session')
 const MongoStore = require('connect-mongo')(session)
 const flash = require('connect-flash')
 const config = require('config-lite')(__dirname)
-const routes = require('./routes')
+const routes = require('./routes')  //默认require routes文件夹下面的index.js文件，若没有index.js则会报错
 const pkg = require('./package')
 
 const app = express()
@@ -62,8 +62,9 @@ app.use(function (req, res, next) {
 
 
 
-// 路由
+// 路由  各种路由入口
 routes(app)
+
 
 // 监听端口，启动程序
 app.listen(config.port, function () {
