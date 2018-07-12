@@ -19,4 +19,10 @@ It looks like you are trying to access MongoDB over HTTP on the native driver po
 PS F:\myblog> node index.js
 打开浏览器：http://localhost:3000/posts 查看效果
 
+运行 supervisor index 启动博客，访问以下地址查看效果：
+
+http://localhost:3000/posts
+http://localhost:3000/signout
+http://localhost:3000/signup
+
 
